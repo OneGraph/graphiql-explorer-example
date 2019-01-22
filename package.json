@@ -1,5 +1,6 @@
 {
   "name": "graphiql-explorer-example",
+  "homepage": "https://onegraph.github.io/graphiql-explorer-example",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -15,13 +16,16 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "flow": "flow"
+    "flow": "flow",
+    "deploy": "gh-pages -d build",
+    "predeploy": "yarn build"
   },
   "eslintConfig": {
     "extends": "react-app"
   },
   "browserslist": [">0.2%", "not dead", "not ie <= 11", "not op_mini all"],
   "devDependencies": {
-    "flow-bin": "^0.91.0"
+    "flow-bin": "^0.91.0",
+    "gh-pages": "^2.0.1"
   }
 }
