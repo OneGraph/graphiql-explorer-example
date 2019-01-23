@@ -5,6 +5,8 @@ import GraphiQL from 'graphiql';
 import GraphiQLExplorer from 'graphiql-explorer';
 import {getIntrospectionQuery, buildClientSchema} from 'graphql';
 
+import {makeDefaultArg, getDefaultScalarArgValue} from './CustomArgs';
+
 import 'graphiql/graphiql.css';
 import './App.css';
 
@@ -81,6 +83,8 @@ class App extends Component<{}, State> {
           onEdit={this._handleEditQuery}
           explorerIsOpen={this.state.explorerIsOpen}
           onToggleExplorer={this._handleToggleExplorer}
+          getDefaultScalarArgValue={getDefaultScalarArgValue}
+          makeDefaultArg={makeDefaultArg}
         />
         <GraphiQL
           ref={ref => (this._graphiql = ref)}
