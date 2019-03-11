@@ -2,7 +2,7 @@ Example usage of [OneGraph](https://www.onegraph.com)'s open source [GraphiQL ex
 
 [OneGraph](https://www.onegraph.com) provides easy, consistent access to the APIs that underlie your business--all through the power of GraphQL.
 
-Sign up at [https://www.onegraph.com](onegraph.com).
+Sign up at [https://www.onegraph.com](https://www.onegraph.com).
 
 ## Setup
 
