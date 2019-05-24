@@ -789,6 +789,11 @@
   version "1.1.3"
   resolved "https://registry.yarnpkg.com/@nodelib/fs.stat/-/fs.stat-1.1.3.tgz#2b5a3ab3f918cca48a8c754c08168e3f03eba61b"
 
+"@sgrove/graphiql-explorer@^0.3.16":
+  version "0.3.16"
+  resolved "https://registry.yarnpkg.com/@sgrove/graphiql-explorer/-/graphiql-explorer-0.3.16.tgz#6a33fd299af0517d964eca8693a5b84722f78c1c"
+  integrity sha512-Z3khIDB8DII4vbPAVjD9U4v0IkC5S3RUxZMwPP6WDniWCCCiX8i6RyR4s5phzc6bdnqjNBrGSpqHzc2gFkohaw==
+
 "@svgr/core@^2.4.1":
   version "2.4.1"
   resolved "https://registry.yarnpkg.com/@svgr/core/-/core-2.4.1.tgz#03a407c28c4a1d84305ae95021e8eabfda8fa731"
@@ -3729,10 +3734,6 @@ globby@^6.1.0:
 graceful-fs@^4.1.11, graceful-fs@^4.1.15, graceful-fs@^4.1.2, graceful-fs@^4.1.6:
   version "4.1.15"
   resolved "https://registry.yarnpkg.com/graceful-fs/-/graceful-fs-4.1.15.tgz#ffb703e1066e8a0eeaa4c8b80ba9253eeefbfb00"
-
-graphiql-explorer@^0.3.6:
-  version "0.3.6"
-  resolved "https://registry.yarnpkg.com/graphiql-explorer/-/graphiql-explorer-0.3.6.tgz#4696815ba81e63d6bdaf9962427038db44cec0d7"
 
 graphiql@^0.12.0:
   version "0.12.0"

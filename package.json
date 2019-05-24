@@ -4,8 +4,9 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "graphql": "14.0.2",
     "graphiql": "^0.12.0",
-    "graphiql-explorer": "^0.3.6",
+    "@sgrove/graphiql-explorer": "^0.3.16",
     "graphql": "^14.1.1",
     "react": "^16.7.0",
     "react-dom": "^16.7.0",
@@ -18,12 +19,18 @@
     "eject": "react-scripts eject",
     "flow": "flow",
     "deploy": "gh-pages -d build",
-    "predeploy": "yarn build"
+    "predeploy": "yarn build",
+    "prettier": "prettier --write \"src/**/*.js\" \"docs/**/*.md\" README.md"
   },
   "eslintConfig": {
     "extends": "react-app"
   },
-  "browserslist": [">0.2%", "not dead", "not ie <= 11", "not op_mini all"],
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ],
   "devDependencies": {
     "flow-bin": "^0.91.0",
     "gh-pages": "^2.0.1"
