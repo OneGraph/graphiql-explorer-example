@@ -1,10 +1,7 @@
 // flow
 
-import GraphiQLExplorer from 'graphiql-explorer';
-import {
-  isEnumType,
-  isWrappingType,
-} from 'graphql';
+import GraphiQLExplorer from "graphiql-explorer";
+import { isEnumType, isWrappingType } from "graphql";
 
 import type {
   GraphQLField,
@@ -13,8 +10,8 @@ import type {
   GraphQLEnumType,
   GraphQLOutputType,
   GraphQLScalarType,
-  ValueNode,
-} from 'graphql';
+  ValueNode
+} from "graphql";
 
 function unwrapOutputType(outputType: GraphQLOutputType): * {
   let unwrappedType = outputType;
@@ -26,13 +23,13 @@ function unwrapOutputType(outputType: GraphQLOutputType): * {
 
 export function makeDefaultArg(
   parentField: GraphQLField<any, any>,
-  arg: GraphQLArgument | GraphQLInputField,
+  arg: GraphQLArgument | GraphQLInputField
 ): boolean {
   const unwrappedType = unwrapOutputType(parentField.type);
   if (
-    unwrappedType.name.startsWith('GitHub') &&
-    unwrappedType.name.endsWith('Connection') &&
-    (arg.name === 'first' || arg.name === 'orderBy')
+    unwrappedType.name.startsWith("GitHub") &&
+    unwrappedType.name.endsWith("Connection") &&
+    (arg.name === "first" || arg.name === "orderBy")
   ) {
     return true;
   }
@@ -42,44 +39,44 @@ export function makeDefaultArg(
 export function getDefaultScalarArgValue(
   parentField: GraphQLField<any, any>,
   arg: GraphQLArgument | GraphQLInputField,
-  argType: GraphQLEnumType | GraphQLScalarType,
+  argType: GraphQLEnumType | GraphQLScalarType
 ): ValueNode {
   const unwrappedType = unwrapOutputType(parentField.type);
   switch (unwrappedType.name) {
-    case 'GitHubRepository':
-      if (arg.name === 'name') {
-        return {kind: 'StringValue', value: 'graphql-js'};
-      } else if (arg.name === 'owner') {
-        return {kind: 'StringValue', value: 'graphql'};
+    case "GitHubRepository":
+      if (arg.name === "name") {
+        return { kind: "StringValue", value: "graphql-js" };
+      } else if (arg.name === "owner") {
+        return { kind: "StringValue", value: "graphql" };
       }
       break;
-    case 'NpmPackage':
-      if (arg.name === 'name') {
-        return {kind: 'StringValue', value: 'graphql'};
+    case "NpmPackage":
+      if (arg.name === "name") {
+        return { kind: "StringValue", value: "graphql" };
       }
       break;
     default:
       if (
         isEnumType(argType) &&
-        unwrappedType.name.startsWith('GitHub') &&
-        unwrappedType.name.endsWith('Connection')
+        unwrappedType.name.startsWith("GitHub") &&
+        unwrappedType.name.endsWith("Connection")
       ) {
         if (
-          arg.name === 'direction' &&
+          arg.name === "direction" &&
           argType
             .getValues()
             .map(x => x.name)
-            .includes('DESC')
+            .includes("DESC")
         ) {
-          return {kind: 'EnumValue', value: 'DESC'};
+          return { kind: "EnumValue", value: "DESC" };
         } else if (
-          arg.name === 'field' &&
+          arg.name === "field" &&
           argType
             .getValues()
             .map(x => x.name)
-            .includes('CREATED_AT')
+            .includes("CREATED_AT")
         ) {
-          return {kind: 'EnumValue', value: 'CREATED_AT'};
+          return { kind: "EnumValue", value: "CREATED_AT" };
         }
       }
       return GraphiQLExplorer.defaultValue(argType);
