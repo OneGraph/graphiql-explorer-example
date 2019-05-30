@@ -1,6 +1,6 @@
 // flow
 
-import GraphiQLExplorer from "@sgrove/graphiql-explorer";
+import GraphiQLExplorer from "graphiql-explorer";
 import { isEnumType, isWrappingType } from "graphql";
 
 import type {

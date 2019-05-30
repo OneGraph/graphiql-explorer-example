@@ -2,7 +2,7 @@
 
 import React, { Component } from "react";
 import GraphiQL from "graphiql";
-import GraphiQLExplorer from "@sgrove/graphiql-explorer";
+import GraphiQLExplorer from "graphiql-explorer";
 import { buildClientSchema, getIntrospectionQuery, parse } from "graphql";
 
 import { makeDefaultArg, getDefaultScalarArgValue } from "./CustomArgs";
