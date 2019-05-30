@@ -36,7 +36,33 @@ function fetcher(params: Object): Object {
     });
 }
 
-const DEFAULT_QUERY = ``;
+const DEFAULT_QUERY = `query npmPackage {
+  npm {
+    package(name: "onegraph-apollo-client") {
+      name
+      homepage
+      downloads {
+        lastMonth {
+          count
+        }
+      }
+    }
+  }
+}
+
+query graphQLPackage {
+  npm {
+    package(name: "graphql") {
+      name
+      homepage
+      downloads {
+        lastMonth {
+          count
+        }
+      }
+    }
+  }
+}`;
 
 type State = {
   schema: ?GraphQLSchema,
