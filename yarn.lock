@@ -3730,10 +3730,10 @@ graceful-fs@^4.1.11, graceful-fs@^4.1.15, graceful-fs@^4.1.2, graceful-fs@^4.1.6
   version "4.1.15"
   resolved "https://registry.yarnpkg.com/graceful-fs/-/graceful-fs-4.1.15.tgz#ffb703e1066e8a0eeaa4c8b80ba9253eeefbfb00"
 
-graphiql-explorer@^0.4.2:
-  version "0.4.2"
-  resolved "https://registry.yarnpkg.com/graphiql-explorer/-/graphiql-explorer-0.4.2.tgz#7b1f10aef05d1575aff47efdd0ae99891e3ff27c"
-  integrity sha512-Q3zQ8r5cm7Sc8ZxnRn58rgfdWZJa5IHT+jy8IyfAFAX/xtm3g6iNaeWk0X5OZD8cteZiDhuUWBohMMOx9aCP9A==
+graphiql-explorer@^0.6.2:
+  version "0.6.2"
+  resolved "https://registry.yarnpkg.com/graphiql-explorer/-/graphiql-explorer-0.6.2.tgz#ea81a8770e3e68c2a97fe849b294bad94ed509e3"
+  integrity sha512-hYSM+TI/0IAXltMOL7YXrvnA5xrKoDjjN7qiksxca2DY7yu46cyHVHG0IKIrBozMDBQLvFOhQMPrzplErwVZ1g==
 
 graphiql@^0.12.0:
   version "0.12.0"
