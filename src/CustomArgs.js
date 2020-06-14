@@ -1,4 +1,4 @@
-// flow
+// @flow
 
 import GraphiQLExplorer from "graphiql-explorer";
 import { isEnumType, isWrappingType } from "graphql";
