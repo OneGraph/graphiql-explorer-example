@@ -1,6 +1,6 @@
 {
   "name": "graphiql-explorer-example",
-  "homepage": "https://trusting-heyrovsky-2cbcc3.netlify.app",
+  "homepage": "https://graphql.minaexplorer.com",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
