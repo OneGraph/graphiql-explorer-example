@@ -14,7 +14,7 @@ import type { GraphQLSchema } from "graphql";
 
 function fetcher(params: Object): Object {
   return fetch(
-    "https://graphql.devnet.minaexplorer.com",
+    "https://devnet.graphql.minaexplorer.com",
     {
       method: "POST",
       headers: {

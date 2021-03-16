@@ -1,6 +1,6 @@
 {
   "name": "graphiql-explorer-example",
-  "homepage": "https://graphql.devnet.minaexplorer.com",
+  "homepage": "https://devnet.graphql.minaexplorer.com",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
